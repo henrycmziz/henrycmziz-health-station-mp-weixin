@@ -1,0 +1,150 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/clock-in/clock-in",
+			"style": {
+				"navigationBarTitleText": "健康打卡",
+				"disableScroll": true ,//增加此项
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tabBar/article/article",
+			"style": {
+				"navigationBarTitleText": "健康小知识",
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/tabBar/mine/mine",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		}
+	],
+	"globalStyle": {
+		// "backgroundTextStyle": "black",
+		"navigationBarBackgroundColor": "#f8f8f8",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "login-template"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#08B6F2",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabBar/article/article",
+				"iconPath": "static/icon/tabbar/article.png",
+				"selectedIconPath": "static/icon/tabbar/article-active.png",
+				"text": "小知识"
+			},
+			{
+				"pagePath": "pages/tabBar/clock-in/clock-in",
+				"iconPath": "static/icon/tabbar/clock-in.png",
+				"selectedIconPath": "static/icon/tabbar/clock-in-active.png",
+				"text": "打卡"
+			},
+			{
+				"pagePath": "pages/tabBar/mine/mine",
+				"iconPath": "static/icon/tabbar/mine.png",
+				"selectedIconPath": "static/icon/tabbar/mine-active.png",
+				"text": "个人"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": []
+	},
+	"subPackages": [{
+			"root": "pages/subcontract/article/",
+			"pages": [{
+					"path": "search",
+					"style": {
+						"navigationBarTitleText": "搜索"
+					}
+				},
+				{
+					"path": "detail",
+					"style": {
+						"navigationBarTitleText": "健康小知识详情",
+						"enablePullDownRefresh": true
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/subcontract/mine/",
+			"pages": [{
+					"path": "info",
+					"style": {
+						"navigationBarTitleText": "个人信息"
+					}
+				},
+				{
+					"path": "help",
+					"style": {
+						"navigationBarTitleText": "帮助中心"
+					}
+				},
+				{
+					"path": "pwd",
+					"style": {
+						"navigationBarTitleText": "修改密码"
+					}
+				},
+				{
+					"path": "setting",
+					"style": {
+						"navigationBarTitleText": "系统设置"
+					}
+				},
+				{
+					"path": "comment",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				},
+				{
+					"path": "about",
+					"style": {
+						"navigationBarTitleText": "关于我们"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/subcontract/clock-in/",
+			"pages": [{
+				"path": "questionnaire/questionnaire",
+				"style": {
+					"navigationBarTitleText": "问卷填写",
+					"enablePullDownRefresh": false
+				}
+			}, {
+				"path": "task/task",
+				"style": {
+					"navigationBarTitleText": "打卡",
+					"enablePullDownRefresh": false
+				}
+
+			}]
+		}
+	]
+}

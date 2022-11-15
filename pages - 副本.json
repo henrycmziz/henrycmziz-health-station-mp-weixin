@@ -1,0 +1,161 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/clockIn/index",
+			"style": {
+				"navigationBarTitleText": "健康打卡",
+				// "enablePullDownRefresh": true,
+				"disableScroll": true, //增加此项
+				"app-plus": {
+					"bounce": "none" //增加此项
+				}
+			}
+		},
+		{
+			"path": "pages/article/index",
+			"style": {
+				"navigationBarTitleText": "健康小知识",
+				"disableScroll": true // 禁止滚动, 解决scroll-view在Android小程序卡顿的问题
+			}
+		},
+		{
+			"path": "pages/article/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+				// "titleNView": false,
+				// "navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/article/detail",
+			"style": {
+				"navigationBarTitleText": "健康小知识详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"color": "white",
+							"colorPressed": "#eee",
+							"float": "right",
+							"fontSize": "30rpx",
+							"text": "退出" // 字体图标\u 开头，加上字体图标unicode后面四位
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/mine/info",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},
+		{
+			"path": "pages/mine/help",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},
+		{
+			"path": "pages/mine/pwd",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/mine/setting",
+			"style": {
+				"navigationBarTitleText": "系统设置"
+			}
+		},
+		{
+			"path": "pages/mine/comment",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		},
+		{
+			"path": "pages/mine/about",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"app-plus": {
+					"navigationBarTextStyle": "white",
+					"bounce": "none"
+				}
+			}
+		}
+		// {
+		// 	"path": "pages/register/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "注册"
+		// 	}
+		// }
+	],
+	"globalStyle": {
+		// "backgroundTextStyle": "black",
+		"navigationBarBackgroundColor": "#f8f8f8",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "login-template"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#08B6F2",
+		// "borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/article/index",
+				"iconPath": "static/icon/tabbar/article.png",
+				"selectedIconPath": "static/icon/tabbar/article-active.png",
+				"text": "小知识"
+			},
+			{
+				"pagePath": "pages/clockIn/index",
+				"iconPath": "static/icon/tabbar/clockIn.png",
+				"selectedIconPath": "static/icon/tabbar/clockIn-active.png",
+				"text": "打卡"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/icon/tabbar/mine.png",
+				"selectedIconPath": "static/icon/tabbar/mine-active.png",
+				"text": "个人"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": []
+	},
+	"subPackages": [
+		{
+			"root": "pages/article",
+			"pages": [
+				{
+					"path": ""
+				}
+			]
+		}
+	]
+}

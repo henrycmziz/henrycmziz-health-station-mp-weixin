@@ -1,0 +1,22 @@
+{
+    "name": "health-station-mp-weixin",
+    "version": "1.0.0",
+    "description": "小智康复驿站患者小程序端",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "keywords": [
+        "HealthStationApp",
+        "小智康复驿站患者小程序端"
+    ],
+    "author": "henry",
+    "license": "MIT",
+    "dependencies": {
+        "crypto-js": "^4.1.1"
+    }
+}
